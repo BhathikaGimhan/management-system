@@ -29,6 +29,7 @@ import { EditProduct } from "../pages/products/EditProduct";
 import { AddSalesman } from "../pages/salesmen/AddSalesman";
 import { EditSalesman } from "../pages/salesmen/EditSalesman";
 import { Settings } from "../pages/setting/Settings";
+import { AiChat } from "../pages/ai-chat/AiChat";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/notifications",
         element: <Notifications />,
+      },
+      {
+        path: "/ai-chat",
+        element: <AiChat />,
       },
       {
         path: "/reports",

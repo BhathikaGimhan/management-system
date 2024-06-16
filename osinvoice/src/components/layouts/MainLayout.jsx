@@ -6,6 +6,7 @@ import {
   BellIcon,
   HelpCircleIcon,
   ArrowBack,
+  AiChat,
 } from "../../utils/icons";
 import { SideBar } from "./SideBar";
 import { Tooltip } from "@material-tailwind/react";
@@ -230,6 +231,10 @@ export const MainLayout = ({ selectedItem }) => {
       mainPath = "Notifications";
       subPaths = [];
       break;
+    case "/ai-chat":
+      mainPath = "AiChat";
+      subPaths = [];
+      break;
     case "/settings":
       mainPath = "Settings";
       subPaths = [];
@@ -287,6 +292,13 @@ export const MainLayout = ({ selectedItem }) => {
                   placeholder="Search here..."
                 />
               </div>
+              <Link to="/ai-chat">
+                <div className="relative hidden md:block ml-5 mr-5">
+                  <i className="absolute text-white transform -translate-y-1/2 left-0 -ml-2 top-1/2">
+                    <AiChat />
+                  </i>
+                </div>
+              </Link>
 
               <Tooltip content="View Notifications">
                 <div className="bg-[#9567E8] md:px-4 md:py-3 px-3 py-3 rounded-[20px] ml-8">
